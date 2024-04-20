@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.loading-title {
+  color: whitesmoke;
+  margin-bottom: 5vh;
+}
+
+.loading-bar {
+  height: 4px;
+  width: 0px;
+  max-width: 20vw;
+  border-radius: 4px;
+  background-color: #ff3838;
+}

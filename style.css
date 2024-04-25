@@ -23,7 +23,11 @@
 .welcome {
   color: black;
   font-size: 4em;
-  text-shadow: 1px 1px #ffe75f, -1px -1px #ffb459;
+  text-shadow: 3px 3px #ffe75f, -3px -3px #ffb459;
+}
+.welcome:hover {
+  font-size: 5em;
+  cursor: pointer;
 }
 
 .loading-bar {
@@ -32,4 +36,26 @@
   max-width: 20vw;
   border-radius: 4px;
   background-color: #f7e414;
+}
+
+.leaf {
+  background: url("/2998122_ecology_green_leaf_plant_spring_icon.png");
+  position: absolute;
+  pointer-events: none;
+  background-size: cover;
+  left: 50%;
+  top: 70%;
+  animation: animate 5s linear;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+    filter: hue-rotate(110);
+  }
+  100% {
+    transform: translate(-10%, -1000%);
+    opacity: 0;
+    filter: hue-rotate(320deg);
+  }
 }

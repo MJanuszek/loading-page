@@ -11,6 +11,22 @@ function loadedAnimation() {
     loadingTitle.textContent = "WELCOME";
     loadingTitle.classList.add("welcome");
     loadingBar.style.width = 0;
+    page.addEventListener("mousemove", (event) => {
+      let x = event.offsetX;
+      let y = event.offsetY;
+      let div = document.createElement("div");
+      div.classList.add("leaf");
+      div.style.left = x + "px";
+      div.style.right = y + "px";
+      const size = Math.random() * 100;
+      div.style.width = size + "px";
+      div.style.height = size + "px";
+
+      page.appendChild(div);
+      setTimeout(() => {
+        div.remove();
+      }, 5000);
+    });
   } else {
     return;
   }
@@ -29,7 +45,7 @@ function loagindPage() {
       clearInterval(loading);
       return;
     }
-  }, 50);
+  }, 40);
 }
 
 loagindPage();
